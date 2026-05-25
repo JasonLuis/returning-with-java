@@ -23,9 +23,9 @@ public class Principal {
 			try {
 				opcao = showInputDialog(Menu.menu()).toCharArray()[0];	
 				
-				System.out.println(opcao);
-				System.out.println(listOptions.contains(opcao));
-				if(!listOptions.contains(opcao)) {
+				
+				Boolean isOpcaoValida = listOptions.contains(opcao);
+				if(!isOpcaoValida) {
 					throw new OpcaoInvalidaException("Digite uma opção valida");
 				} else if(opcao != '0'){
 					Double num1 = Double.parseDouble(showInputDialog("Digite um valor"));
